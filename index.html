@@ -1,0 +1,86 @@
+<!-- buat frontend-nya dulu -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Dummy Project</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        #pesan {
+            font-size: 1.2em;
+            color: #555;
+            min-height: 1.5em; 
+        }
+
+        #tombolUbah {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block;
+            margin: 15px auto;
+
+        }
+
+        #tombolUbah:hover {
+            background-color: #0056b3;
+        }
+
+        input {
+            width: 50vh;
+            padding: 10px 5px;
+            margin: auto;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Jasa Mata-Mata Seseorang</h1>
+        <input type="text" placeholder="Ketik Nama Lengkap Seseorang...">
+        
+        <button id="tombolUbah">Submit</button>
+    </div>
+
+    <script>
+        const tombol = document.getElementById('tombolUbah');
+        const pesan = document.getElementById('pesan');
+
+        tombol.addEventListener('click', function() {
+            
+            if (pesan.textContent === "Klik tombol di bawah ini!") {
+                pesan.textContent = "Halo, JavaScript berhasil diubah!";
+            } else {
+                pesan.textContent = "Klik tombol di bawah ini!";
+            }
+        });
+    </script>
+
+</body>
+</html>
